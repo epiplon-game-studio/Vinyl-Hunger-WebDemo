@@ -1,0 +1,17 @@
+{
+  "name": "epiplon-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.9.10"
+  },
+  "author": "",
+  "license": "ISC"
+}
