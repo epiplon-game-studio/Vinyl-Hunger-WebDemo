@@ -5,14 +5,14 @@
   "author": "Vinícius",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transpile": "./node_modules/.bin/tsc --project tsconfig.json"
   },
   "devDependencies": {
-    "typescript": "^3.9.10",
+    "@types/marked": "^5.0.1",
+    "html-loader": "^4.2.0",
+    "marked": "^7.0.2",
     "ts-loader": "^9.4.4",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "typescript": "^3.9.10"
   },
   "license": "ISC"
 }

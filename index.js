@@ -1,10 +1,6 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
+"use strict";
 function greeter(person) {
     return "This is " + person;
 }
-var user = "Vinny";
+let user = "Vinny";
 document.body.textContent = greeter(user);
-
-/******/ })()
-;
