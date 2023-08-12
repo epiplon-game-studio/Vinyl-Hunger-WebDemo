@@ -1,7 +1,7 @@
 function greeter(person: string) {
-    return "Hello, " + person;
+    return "This is " + person;
   }
    
-  let user = "Jane User";
+  let user = "Vinny";
    
   document.body.textContent = greeter(user);
