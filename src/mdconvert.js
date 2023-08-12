@@ -10,10 +10,13 @@ import {
 import { dirname, join, extname } from 'path';
 import { fileURLToPath } from 'url';
 
-// if (process.argv.length < 3) {
-//     console.log('Usage: node mdconvert.js' + process.argv[1] + ' FILENAME');
-//     process.exit(1);
-// }
+if (process.argv.length < 3) {
+    console.log('Usage: node mdconvert.js [input_folder] [output_folder]');
+    process.exit(1);
+}
+
+const inputFolder = process.argv[2];
+const outputFolder = process.argv[3];
 
 
 function convert(files){
@@ -37,9 +40,9 @@ function convert(files){
 // base folder
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // join path
-const blogPostFolder = join(__dirname, 'blog', 'posts');
+const blogPostFolder = join(__dirname, inputFolder);
 // destination
-const destPath = join(__dirname, '..', 'posts');
+const destPath = join(__dirname, outputFolder);
 access(destPath, constants.W_OK)
 .catch(() =>{
     mkdir(destPath);

@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "transpile": "./node_modules/.bin/tsc --project tsconfig.json",
-    "convert-md": "node mdconvert.js",
+    "convert-md": "node mdconvert.js ./blog ../posts",
     "build": "npm run transpile && npm run convert-md",
-    "publish": "git commit . && git push origin master"
+    "publish": "git commit --interactive . && git push origin master"
   },
   "devDependencies": {
     "@types/marked": "^5.0.1",
