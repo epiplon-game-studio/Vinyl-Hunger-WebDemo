@@ -5,7 +5,9 @@
   "author": "Vinícius",
   "private": true,
   "scripts": {
-    "transpile": "./node_modules/.bin/tsc --project tsconfig.json"
+    "transpile": "./node_modules/.bin/tsc --project tsconfig.json",
+    "convert-md": "node mdconvert.js",
+    "build": "npm run transpile && npm run convert-md"
   },
   "devDependencies": {
     "@types/marked": "^5.0.1",
@@ -14,5 +16,6 @@
     "ts-loader": "^9.4.4",
     "typescript": "^3.9.10"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
