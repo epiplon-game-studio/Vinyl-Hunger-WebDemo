@@ -18,7 +18,11 @@ if (process.argv.length < 3) {
 const inputFolder = process.argv[2];
 const outputFolder = process.argv[3];
 
-
+/**
+ * Converts an array of file names from Markdown format to HTML format.
+ *
+ * @param {Array} files - The array of file names to be converted.
+ */
 function convert(files){
     files.forEach((fileName) => {
         var htmlFileName = fileName.replace('.md', '.html');
@@ -38,7 +42,7 @@ function convert(files){
 }
 
 // base folder
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = join(dirname(fileURLToPath(import.meta.url)), '..');
 // join path
 const blogPostFolder = join(__dirname, inputFolder);
 // destination
